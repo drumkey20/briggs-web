@@ -1,3 +1,4 @@
+/* Copyright (c) 2026 BRIGGS. Všetky práva vyhradené. */
 *{box-sizing:border-box}
 :root{--ink:#141414;--paper:#fff;--soft:#efeeec;--red:#9b1212;--mute:#5c5a56;--line:#bdbbb6;--side:max(1.25rem,calc((100% - 1100px)/2))}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
@@ -60,5 +61,5 @@ nav a:hover{color:var(--red);text-decoration:underline}
 .contact{background:var(--red);color:#fff}
 
 footer{padding:1.5rem var(--side);color:var(--mute);font-size:.9rem}
-footer p{margin:0}
-footer .cookies-info{margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--line);font-size:.85rem;max-width:none}
+footer p{margin:0;max-width:none}
+footer .cookies-info{margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--line);font-size:.85rem}
