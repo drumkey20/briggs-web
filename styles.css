@@ -37,6 +37,17 @@ nav a:hover{color:var(--red);text-decoration:underline}
 .wide{grid-column:span 2}
 @media (min-width:800px){.grid{grid-template-columns:repeat(4,1fr);gap:.8rem}}
 
+.gigs-layout{display:grid;gap:2rem;align-items:start}
+@media (min-width:800px){.gigs-layout{grid-template-columns:1fr 300px;gap:3rem}}
+.gig-poster{display:block;max-width:320px;border:1px solid var(--line)}
+.gig-poster img{width:100%;height:auto}
+.gig-list{list-style:none;margin:1.5rem 0 0;padding:0;border-top:1px solid var(--line)}
+.gig-list li{display:grid;gap:.25rem 1.5rem;padding:.9rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.gig-date{font-weight:900;color:var(--red);white-space:nowrap}
+.gig-place{font-weight:700}
+.gig-info{color:var(--mute);font-size:.95rem}
+@media (min-width:700px){.gig-list li{grid-template-columns:9.5rem 1fr auto}}
+
 .about{display:grid;gap:2rem}
 @media (min-width:800px){.about{grid-template-columns:1fr 1fr;gap:3rem}}
 .members{display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem;align-content:start;margin:0}
