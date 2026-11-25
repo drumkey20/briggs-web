@@ -8,24 +8,82 @@
   <meta name="author" content="BRIGGS">
   <meta name="copyright" content="Copyright © 2026 BRIGGS. Všetky práva vyhradené.">
   <meta name="description" content="BRIGGS – živá rocková kapela na oslavy, festivaly, klubové koncerty a firemné akcie. Dohodnite si termín.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#9b1212">
   <title>BRIGGS – živá hudba na vaše akcie</title>
+
+  <!-- ADRESA STRÁNKY: po kúpe vlastnej domény zmeňte "https://briggsband.ddns.net" na novú adresu
+       na 4 miestach: canonical, og:url, og:image a v bloku JSON-LD nižšie (hľadajte briggsband.ddns.net). -->
+  <link rel="canonical" href="https://briggsband.ddns.net/">
+
+  <!-- Náhľad pri zdieľaní na Facebooku, Messengeri a pod. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sk_SK">
+  <meta property="og:site_name" content="BRIGGS">
+  <meta property="og:title" content="BRIGGS – živá hudba na vaše akcie">
+  <meta property="og:description" content="Živá rocková kapela na oslavy, festivaly, klubové koncerty a firemné akcie. Dohodnite si termín.">
+  <meta property="og:url" content="https://briggsband.ddns.net/">
+  <meta property="og:image" content="https://briggsband.ddns.net/images/Briggs.webp">
+  <meta property="og:image:width" content="960">
+  <meta property="og:image:height" content="772">
+  <meta property="og:image:alt" content="Skupina BRIGGS: šesť členov pri spoločnej fotke">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" href="images/favicon_trsatko.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Štruktúrované dáta pre Google (kapela + nadchádzajúci koncert).
+       Pri novej akcii upravte názov, dátum a miesto; po skončení akcie ju odstráňte. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "BRIGGS",
-    "genre": ["Rock", "Pop Rock", "Cover band"],
-    "email": "briggs.cover.band@gmail.com",
-    "telephone": "+421911283511",
-    "sameAs": [
-      "https://www.facebook.com/p/Briggs-100063162012209/"
+    "@graph": [
+      {
+        "@type": "MusicGroup",
+        "@id": "https://briggsband.ddns.net/#kapela",
+        "name": "BRIGGS",
+        "url": "https://briggsband.ddns.net/",
+        "image": "https://briggsband.ddns.net/images/Briggs.webp",
+        "description": "Živá rocková kapela na oslavy, festivaly, klubové koncerty a firemné akcie.",
+        "genre": ["Rock", "Pop Rock", "Cover band"],
+        "email": "briggs.cover.band@gmail.com",
+        "telephone": "+421911283511",
+        "sameAs": [
+          "https://www.facebook.com/p/Briggs-100063162012209/"
+        ]
+      },
+      {
+        "@type": "MusicEvent",
+        "name": "BRIGGS – koncert vo Včelín Music Bar",
+        "startDate": "2027-01-09T20:00:00+01:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "image": "https://briggsband.ddns.net/images/plagat_Vcelin.webp",
+        "location": {
+          "@type": "MusicVenue",
+          "name": "Včelín Music Bar",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Martin",
+            "addressCountry": "SK"
+          }
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "6",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://briggsband.ddns.net/#akcie"
+        },
+        "performer": { "@id": "https://briggsband.ddns.net/#kapela" }
+      }
     ]
   }
   </script>
 </head>
 <body>
+
+  <a class="skip" href="#obsah">Preskočiť na obsah</a>
 
   <header>
     <a class="logo" href="#uvod" aria-label="BRIGGS – späť hore">
@@ -40,7 +98,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="obsah">
     <section id="uvod" class="hero">
       <div>
         <h1>Živá hudba, ktorá rozhýbe vašu akciu</h1>
@@ -57,13 +115,13 @@
       <h2>Galéria</h2>
       <p>Kliknutím sa fotka otvorí vo väčšom formáte.</p>
       <div class="grid">
-        <a class="wide" href="#foto-jaj"><img src="images/JaJ.webp" width="960" height="480" loading="lazy" alt="Spevák a speváčka pri mikrofóne"></a>
-        <a href="#foto-peter"><img src="images/Peter.webp" width="480" height="480" loading="lazy" alt="Bubeník za bicími"></a>
-        <a href="#foto-dusan"><img src="images/Dusan.webp" width="480" height="480" loading="lazy" alt="Klávesista pri klávesoch"></a>
-        <a href="#foto-robert"><img src="images/Robert.webp" width="480" height="480" loading="lazy" alt="Gitarista na pódiu"></a>
-        <a href="#foto-ivan"><img src="images/Ivan.webp" width="480" height="480" loading="lazy" alt="Basgitarista na pódiu"></a>
-        <a href="#foto-jozef"><img src="images/Jozef.webp" width="480" height="480" loading="lazy" alt="Spevák s gitarou"></a>
-        <a href="#foto-janka"><img src="images/Janka.webp" width="480" height="480" loading="lazy" alt="Speváčka na pódiu"></a>
+        <a class="wide" href="#foto-jaj"><img src="images/JaJ.webp" width="960" height="480" loading="lazy" decoding="async" alt="Spevák a speváčka pri mikrofóne"></a>
+        <a href="#foto-peter"><img src="images/Peter.webp" width="480" height="480" loading="lazy" decoding="async" alt="Bubeník za bicími"></a>
+        <a href="#foto-dusan"><img src="images/Dusan.webp" width="480" height="480" loading="lazy" decoding="async" alt="Klávesista pri klávesoch"></a>
+        <a href="#foto-robert"><img src="images/Robert.webp" width="480" height="480" loading="lazy" decoding="async" alt="Gitarista na pódiu"></a>
+        <a href="#foto-ivan"><img src="images/Ivan.webp" width="480" height="480" loading="lazy" decoding="async" alt="Basgitarista na pódiu"></a>
+        <a href="#foto-jozef"><img src="images/Jozef.webp" width="480" height="480" loading="lazy" decoding="async" alt="Spevák s gitarou"></a>
+        <a href="#foto-janka"><img src="images/Janka.webp" width="480" height="480" loading="lazy" decoding="async" alt="Speváčka na pódiu"></a>
       </div>
     </section>
 
@@ -88,10 +146,10 @@
         </div>
         <div class="gig-posters">
           <a class="gig-poster" href="#plagat-vcelin">
-            <img src="images/plagat_Vcelin.webp" width="800" height="1131" loading="lazy" alt="Plagát koncertu BRIGGS – 9. 1. 2027 Včelín Music Bar, Martin">
+            <img src="images/plagat_Vcelin.webp" width="800" height="1131" loading="lazy" decoding="async" alt="Plagát koncertu BRIGGS – 9. 1. 2027 Včelín Music Bar, Martin">
           </a>
           <a class="gig-poster" href="#plagat-kostany">
-            <img src="images/plagat_Kostany.webp" width="800" height="1131" loading="lazy" alt="Plagát akcie BRIGGS – 17. 10. 2026 Obec Košťany nad Turcom">
+            <img src="images/plagat_Kostany.webp" width="800" height="1131" loading="lazy" decoding="async" alt="Plagát akcie BRIGGS – 17. 10. 2026 Obec Košťany nad Turcom">
           </a>
         </div>
       </div>
@@ -127,7 +185,7 @@
       <p class="buttons">
         <a class="btn btn-light" href="mailto:briggs.cover.band@gmail.com">briggs.cover.band@gmail.com</a>
         <a class="btn btn-light" href="tel:+421911283511">+421 911 283 511</a>
-        <a class="btn btn-light" href="https://www.facebook.com/p/Briggs-100063162012209/" target="_blank" rel="noopener noreferrer" aria-label="Navštíviť Facebook stránku kapely BRIGGS">Facebook BRIGGS</a>
+        <a class="btn btn-light" href="https://www.facebook.com/p/Briggs-100063162012209/" target="_blank" rel="noopener noreferrer" aria-label="Navštíviť Facebook stránku kapely BRIGGS (otvorí sa v novom okne)">Facebook BRIGGS</a>
       </p>
     </section>
   </main>
@@ -140,47 +198,47 @@
   <!-- LIGHTBOX PRE GALÉRIU A PLAGÁTY (čisté CSS bez JS) -->
   <div id="foto-jaj" class="lightbox" role="dialog" aria-label="Spevák a speváčka pri mikrofóne">
     <a href="#_" class="lightbox-bg" aria-label="Zavrieť"></a>
-    <img src="images/big-JaJ.webp" loading="lazy" alt="Spevák a speváčka pri mikrofóne">
+    <img src="images/big-JaJ.webp" loading="lazy" decoding="async" alt="Spevák a speváčka pri mikrofóne">
     <a href="#_" class="lightbox-close" aria-label="Zavrieť">✕</a>
   </div>
   <div id="foto-peter" class="lightbox" role="dialog" aria-label="Bubeník za bicími">
     <a href="#_" class="lightbox-bg" aria-label="Zavrieť"></a>
-    <img src="images/big-Peter.webp" loading="lazy" alt="Bubeník za bicími">
+    <img src="images/big-Peter.webp" loading="lazy" decoding="async" alt="Bubeník za bicími">
     <a href="#_" class="lightbox-close" aria-label="Zavrieť">✕</a>
   </div>
   <div id="foto-dusan" class="lightbox" role="dialog" aria-label="Klávesista pri klávesoch">
     <a href="#_" class="lightbox-bg" aria-label="Zavrieť"></a>
-    <img src="images/big-Dusan.webp" loading="lazy" alt="Klávesista pri klávesoch">
+    <img src="images/big-Dusan.webp" loading="lazy" decoding="async" alt="Klávesista pri klávesoch">
     <a href="#_" class="lightbox-close" aria-label="Zavrieť">✕</a>
   </div>
   <div id="foto-robert" class="lightbox" role="dialog" aria-label="Gitarista na pódiu">
     <a href="#_" class="lightbox-bg" aria-label="Zavrieť"></a>
-    <img src="images/big-Robert.webp" loading="lazy" alt="Gitarista na pódiu">
+    <img src="images/big-Robert.webp" loading="lazy" decoding="async" alt="Gitarista na pódiu">
     <a href="#_" class="lightbox-close" aria-label="Zavrieť">✕</a>
   </div>
   <div id="foto-ivan" class="lightbox" role="dialog" aria-label="Basgitarista na pódiu">
     <a href="#_" class="lightbox-bg" aria-label="Zavrieť"></a>
-    <img src="images/big-Ivan.webp" loading="lazy" alt="Basgitarista na pódiu">
+    <img src="images/big-Ivan.webp" loading="lazy" decoding="async" alt="Basgitarista na pódiu">
     <a href="#_" class="lightbox-close" aria-label="Zavrieť">✕</a>
   </div>
   <div id="foto-jozef" class="lightbox" role="dialog" aria-label="Spevák s gitarou">
     <a href="#_" class="lightbox-bg" aria-label="Zavrieť"></a>
-    <img src="images/big-Jozef.webp" loading="lazy" alt="Spevák s gitarou">
+    <img src="images/big-Jozef.webp" loading="lazy" decoding="async" alt="Spevák s gitarou">
     <a href="#_" class="lightbox-close" aria-label="Zavrieť">✕</a>
   </div>
   <div id="foto-janka" class="lightbox" role="dialog" aria-label="Speváčka na pódiu">
     <a href="#_" class="lightbox-bg" aria-label="Zavrieť"></a>
-    <img src="images/big-Janka.webp" loading="lazy" alt="Speváčka na pódiu">
+    <img src="images/big-Janka.webp" loading="lazy" decoding="async" alt="Speváčka na pódiu">
     <a href="#_" class="lightbox-close" aria-label="Zavrieť">✕</a>
   </div>
   <div id="plagat-vcelin" class="lightbox" role="dialog" aria-label="Plagát koncertu BRIGGS – 9. 1. 2027 Včelín Music Bar, Martin">
     <a href="#_" class="lightbox-bg" aria-label="Zavrieť"></a>
-    <img src="images/plagat_Vcelin.webp" loading="lazy" alt="Plagát koncertu BRIGGS – 9. 1. 2027 Včelín Music Bar, Martin">
+    <img src="images/plagat_Vcelin.webp" loading="lazy" decoding="async" alt="Plagát koncertu BRIGGS – 9. 1. 2027 Včelín Music Bar, Martin">
     <a href="#_" class="lightbox-close" aria-label="Zavrieť">✕</a>
   </div>
   <div id="plagat-kostany" class="lightbox" role="dialog" aria-label="Plagát akcie BRIGGS – 17. 10. 2026 Obec Košťany nad Turcom">
     <a href="#_" class="lightbox-bg" aria-label="Zavrieť"></a>
-    <img src="images/plagat_Kostany.webp" loading="lazy" alt="Plagát akcie BRIGGS – 17. 10. 2026 Obec Košťany nad Turcom">
+    <img src="images/plagat_Kostany.webp" loading="lazy" decoding="async" alt="Plagát akcie BRIGGS – 17. 10. 2026 Obec Košťany nad Turcom">
     <a href="#_" class="lightbox-close" aria-label="Zavrieť">✕</a>
   </div>
 
