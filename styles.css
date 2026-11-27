@@ -44,7 +44,7 @@ a {
   outline-offset: 3px;
 }
 
-/* Odkaz "Preskočiť na obsah" pre ovládanie klávesnicou */
+/* Odkaz „Preskočiť na obsah“ na ovládanie klávesnicou */
 .skip {
   position: absolute;
   top: -4rem;
@@ -377,7 +377,7 @@ nav a:hover {
   }
 }
 
-/* O nás */
+/* O nás a repertoár */
 .about {
   display: grid;
   gap: 2rem;
@@ -422,15 +422,36 @@ nav a:hover {
   content: "−";
 }
 
+.repertoire-styles {
+  padding: 0 1rem 1rem;
+}
+
+.repertoire-group {
+  margin-top: 0.9rem;
+}
+
+.repertoire-group:first-child {
+  margin-top: 0.25rem;
+}
+
+.repertoire-group h3 {
+  margin: 0 0 0.35rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
 .repertoire ul {
   margin: 0;
-  padding: 0 1rem 1rem 2.1rem;
+  padding: 0.15rem 0 0 1.2rem;
   color: var(--mute);
   font-size: 0.95rem;
 }
 
 .repertoire li {
-  margin-top: 0.4rem;
+  margin-top: 0.35rem;
 }
 
 .members {
@@ -552,7 +573,7 @@ footer .cookies-info a {
   color: var(--ink);
 }
 
-/* Plávajúce tlačidlo a dialógy Cookies */
+/* Plávajúce tlačidlo a dialógy cookies */
 .cookie-fab {
   position: fixed;
   right: 1rem;
